@@ -77,5 +77,13 @@ strong {
             font-size: smaller;
             margin-bottom: 12px;
         }
+        > div{
+            div {
+                margin-top: 4px;
+                a{
+                    font-size: smaller;
+                }
+            }
+        }
     }
 }
