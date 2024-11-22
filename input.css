@@ -61,3 +61,20 @@ strong {
         }
     }
 }
+
+@media (max-width: 624px){
+
+    .project {
+        flex-direction: column;
+        img{
+            width: 96%;
+            margin: auto;
+        }
+        h3{
+            font-size: small;
+        }
+        p{
+            font-size: smaller;
+        }
+    }
+}

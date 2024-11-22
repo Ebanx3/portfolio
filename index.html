@@ -12,8 +12,8 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-stone-900 w-screen h-screen overflow-x-hidden">
-    <nav class="fixed top-0 w-full">
+  <body class="bg-stone-900 w-screen h-screen overflow-x-hidden p-2">
+    <nav class="fixed top-0 w-full hidden sm:block">
       <ul
         class="flex justify-end text-stone-200 gap-6 py-2 font-medium max-w-[1024px] m-auto bg-stone-900 border-b-2 border-stone-600 px-2"
       >
@@ -24,13 +24,13 @@
       </ul>
     </nav>
 
-    <header class="max-w-[1024px] m-auto pt-24 pb-8">
-      <h1 class="text-3xl text-stone-100 font-bold">Esteban dos Santos</h1>
-      <h2 class="text-2xl font-bold text-rose-400">
+    <header class="max-w-[1024px] m-auto pt-12 sm:pt-24 pb-8">
+      <h1 class="text-xl sm:text-3xl text-stone-100 font-bold">Esteban dos Santos</h1>
+      <h2 class="text-l sm:text-2xl font-bold text-rose-400">
         Desarrollador de Software
       </h2>
 
-      <p class="text-stone-400 font-medium whitespace-pre-line p-2">
+      <p class="text-sm sm:text-l text-stone-400 font-medium whitespace-pre-line p-2">
         Soy un apasionado del desarrollo de software en general, pero con más experiencia en <strong>desarrollo web</strong>. Actualmente, estoy en proceso de transición hacia esta emocionante carrera, habiendo completado varios cursos con <strong>React</strong> y <strong>Node.js</strong>. 
         
         Además, estoy cursando <strong>Ingeniería en Computación</strong>, lo que me proporciona una base sólida tanto teórica como práctica. Estoy motivado por la oportunidad de <strong>crear soluciones innovadoras</strong> y <strong>contribuir a proyectos significativos</strong>.
@@ -66,7 +66,7 @@
     <main class="max-w-[1024px] m-auto py-6">
       <!-- Sección PROYECTOS -->
       <section id="projects" class="py-12">
-        <h2 class="text-2xl text-stone-300 font-bold my-2">Proyectos</h2>
+        <h2 class="text-l sm:text-2xl text-stone-300 font-bold my-2">Proyectos</h2>
         <div id="projects-container" class="flex flex-col gap-8"></div>
         <div class="flex justify-center mt-2">
           <a
