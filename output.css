@@ -571,10 +571,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -589,10 +585,6 @@ video {
 
 .hidden {
   display: none;
-}
-
-.h-96 {
-  height: 24rem;
 }
 
 .h-screen {
@@ -722,6 +714,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -821,6 +818,7 @@ strong {
     }
     p{
       font-size: smaller;
+      margin-bottom: 12px;
     }
   }
 }
@@ -862,5 +860,10 @@ strong {
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }

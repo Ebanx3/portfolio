@@ -75,6 +75,7 @@ strong {
         }
         p{
             font-size: smaller;
+            margin-bottom: 12px;
         }
     }
 }
