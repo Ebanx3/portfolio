@@ -1,0 +1,24 @@
+[ 
+    {
+        "name":"Organizador de enlaces, marcadores y notas",
+        "description":"Sitio web hecho con React, Vite y TypeScript, que permite organizar marcadores, enlaces y agregar notas.\nAdemás consume la api de OpenWeather para mostrar información del clima en la ciudad que elijas.",
+        "image":"./resources/organizador.png",
+        "deploy":"https://links-notes.netlify.app",
+        "repository":"https://github.com/Ebanx3/organizer"
+    },
+    {
+        "name":"Organizador de enlaces, marcadores y notas",
+        "description":"Sitio web hecho con React, Vite y TypeScript, que permite organizar marcadores, enlaces y agregar notas.\nAdemás consume la api de OpenWeather para mostrar información del clima en la ciudad que elijas.",
+        "image":"./resources/organizador.png",
+        "deploy":"https://links-notes.netlify.app",
+        "repository":"https://github.com/Ebanx3/organizer"
+    }
+    ,
+    {
+        "name":"Organizador de enlaces, marcadores y notas",
+        "description":"Sitio web hecho con React, Vite y TypeScript, que permite organizar marcadores, enlaces y agregar notas.\nAdemás consume la api de OpenWeather para mostrar información del clima en la ciudad que elijas.",
+        "image":"./resources/organizador.png",
+        "deploy":"https://links-notes.netlify.app",
+        "repository":"https://github.com/Ebanx3/organizer"
+    }
+]

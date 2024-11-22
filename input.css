@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+strong {
+    color:#d6d3d1;
+}
+
+.project {
+    display: flex;
+    border: 1px solid #292524;
+    
+    img{
+        width: 33%;
+        object-fit: cover;
+        padding: 8px;
+    }
+
+    > div {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        
+        h3{
+            color: #d6d3d1;
+            font-weight: 500;
+        }
+
+        p {
+            color: #a8a29e;
+            font-size: small;
+        }
+
+        div{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: auto;
+            gap: 16px;
+
+            a {
+                display: flex;
+                color: #fb7185;
+                font-size: small;
+                font-weight: 500;
+                align-items: center;
+                border: 1px solid #fb7185;
+                padding: 2px 6px;
+                /* border-radius: 8px; */
+            }
+
+            a:hover{
+                /* color:#fda4af; */
+                /* border-color: #fda4af; */
+                background-color: #fb7185;
+                color: black;
+            }
+        }
+    }
+}
