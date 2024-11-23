@@ -20,7 +20,6 @@
         <li><a href="#" class="hover:text-stone-50">Inicio</a></li>
         <li><a href="#projects" class="hover:text-stone-50">Proyectos</a></li>
         <li><a href="#studies" class="hover:text-stone-50">Estudios</a></li>
-        <li><a href="#techs" class="hover:text-stone-50">Tecnologías</a></li>
         <li><a href="#contact" class="hover:text-stone-50">Contacto</a></li>
       </ul>
     </nav>
@@ -33,7 +32,7 @@
         Desarrollador de Software
       </h2>
       <p class="text-sm sm:text-l text-stone-400 font-medium whitespace-pre-line p-2">
-        Soy un apasionado del desarrollo de software en general, pero con más experiencia en <strong>desarrollo web</strong>. Actualmente, estoy en proceso de transición hacia esta emocionante carrera, habiendo completado varios cursos con <strong>React</strong> y <strong>Node.js</strong>. 
+        Soy un apasionado del desarrollo de software en general, con más experiencia en <strong>desarrollo web</strong>. Actualmente, estoy en proceso de transición hacia esta emocionante carrera, habiendo completado varios cursos con <strong>React</strong> y <strong>Node.js</strong>. 
         
         Además, estoy cursando <strong>Ingeniería en Computación</strong>, lo que me proporciona una base sólida tanto teórica como práctica. Estoy motivado por la oportunidad de <strong>crear soluciones innovadoras</strong> y <strong>contribuir a proyectos significativos</strong>.
       </p>
@@ -139,7 +138,7 @@
             <span class="text-xl font-bold">Desarrollo Web</span>
             <span class="text-stone-400 text-sm">2022</span>
             <a
-              href="https://www.coursera.org/account/accomplishments/verify/EBVMLNE2YWPT?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              href="https://www.coderhouse.com/ar/certificados/624bb2bf051e01001ac23348"
               target="_blank"
               class="uppercase text-xs text-rose-400 font-medium hover:text-rose-300"
               >certificado</a
@@ -152,7 +151,7 @@
             <span class="text-xl font-bold">ReactJs</span>
             <span class="text-stone-400 text-sm">2022</span>
             <a
-              href="https://www.coursera.org/account/accomplishments/verify/EBVMLNE2YWPT?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              href="https://www.coderhouse.com/ar/certificados/633a1ce4dece68000e7190c2"
               target="_blank"
               class="uppercase text-xs text-rose-400 font-medium hover:text-rose-300"
               >certificado</a
@@ -165,7 +164,7 @@
             <span class="text-xl font-bold">Programación Backend</span>
             <span class="text-stone-400 text-sm">2022</span>
             <a
-              href="https://www.coursera.org/account/accomplishments/verify/EBVMLNE2YWPT?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              href="https://www.coderhouse.com/ar/certificados/632474a91a7013000e9f7b89"
               target="_blank"
               class="uppercase text-xs text-rose-400 font-medium hover:text-rose-300"
               >certificado</a
@@ -241,24 +240,31 @@
           Contacto
         </h2>
         <div class="flex flex-col sm:flex-row">
-          <div class="flex flex-col p-4 text-stone-200 w-1/3 justify-center">
+          <div class="flex flex-col p-4 text-stone-200 sm:w-1/3 justify-center">
             <p class="whitespace-pre-line">¿Tienes alguna pregunta o comentario?
               
               ¡No dudes en enviarme un mensaje!
               
               Estoy aquí para ayudarte con lo que necesites.</p>
           </div>
-          <form id="contactForm" class="flex flex-col gap-2 p-4 sm:p-8 border-2 border-stone-800  w-2/3">
+          <form id="contactForm" class="flex flex-col gap-2 p-3  border-2 border-stone-800  sm:w-2/3">
             <label for="email" class="text-stone-200">Email:</label>
             <input type="email" name="email" id="email" class="bg-stone-800 focus:outline-none p-2 text-stone-100" autocomplete="off" placeholder="correo-de-contacto@correo.com">
             <label for="message" class="text-stone-200 mt-4">Mensaje:</label>
-            <textarea name="message" rows="6" class="bg-stone-800 resize-none focus:outline-none p-2 text-stone-100"></textarea>
+            <textarea name="message" rows="6" class="bg-stone-800 resize-none focus:outline-none p-2 text-stone-100" placeholder="Hola Esteban! ..."></textarea>
             <input type="submit" value="Enviar" class="text-rose-400 flex gap-2 border-[1px] border-rose-400 py-1 px-2 items-center text-sm hover:bg-rose-400 hover:text-black font-bold w-24 self-end cursor-pointer">
           </form>
           
         </div>
       </section>
     </main>
+
+    <footer class="border-t-2 border-stone-600 flex justify-center text-stone-300 text-sm gap-6 py-4 max-w-[1024px] m-auto">
+      <button id="emailText">Email</button>
+      <a href="https://www.linkedin.com/in/esteban-2san/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Ebanx3" target="_blank">GitHub</a>
+    </footer>
     <script src="./js/getProjects.js" type="module"></script>
+    <script src="./js/copyToClipboard.js" type="module"></script>
   </body>
 </html>
