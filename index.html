@@ -247,12 +247,22 @@
               
               Estoy aquí para ayudarte con lo que necesites.</p>
           </div>
-          <form id="contactForm" class="flex flex-col gap-2 p-3  border-2 border-stone-800  sm:w-2/3">
+          <form id="contactForm" class="flex flex-col gap-2 p-3  border-2 border-stone-800  sm:w-2/3 relative">
             <label for="email" class="text-stone-200">Email:</label>
-            <input type="email" name="email" id="email" class="bg-stone-800 focus:outline-none p-2 text-stone-100" autocomplete="off" placeholder="correo-de-contacto@correo.com">
+            <input type="email" name="email" id="email" class="bg-stone-800 focus:outline-none p-2 text-stone-100" autocomplete="off" placeholder="correo-de-contacto@correo.com" required>
             <label for="message" class="text-stone-200 mt-4">Mensaje:</label>
-            <textarea name="message" rows="6" class="bg-stone-800 resize-none focus:outline-none p-2 text-stone-100" placeholder="Hola Esteban! ..."></textarea>
-            <input type="submit" value="Enviar" class="text-rose-400 flex gap-2 border-[1px] border-rose-400 py-1 px-2 items-center text-sm hover:bg-rose-400 hover:text-black font-bold w-24 self-end cursor-pointer">
+            <textarea name="message" rows="6" class="bg-stone-800 resize-none focus:outline-none p-2 text-stone-100" placeholder="Hola Esteban! ..." required></textarea>
+            <div class="flex justify-between items-center">
+              <span class="text-stone-400 text-xs flex items-center gap-2" id="serverStatusSpan">Estado del servidor: </span>
+              <button id="sendButton" type="submit" class="text-rose-400 flex gap-2 border-[1px] border-rose-400 py-1 px-2 items-center text-sm hover:bg-rose-400 hover:text-black font-bold">Enviar</button>
+            </div>
+            <div id="loadingDiv" class="absolute bg-stone-800 h-full w-full top-0 left-0 justify-center items-center flex-col gap-6 hidden">
+              <img src="./resources/loader.svg" alt="loader icon svg" class="h-48 ">
+              <span class="text-stone-300">Tu mensaje está siendo enviado</span>
+            </div>
+            <div id="messageSended" class="absolute bg-stone-800 h-full w-full top-0 left-0 justify-center items-center flex-col gap-6 hidden">
+              <span class="text-stone-300 text-center" id="messageSendedSpan"></span>
+            </div>
           </form>
           
         </div>
@@ -260,11 +270,16 @@
     </main>
 
     <footer class="border-t-2 border-stone-600 flex justify-center text-stone-300 text-sm gap-6 py-4 max-w-[1024px] m-auto">
-      <button id="emailText">Email</button>
+      <div class="relative">
+        <button id="emailText">Email</button>
+        <span id="emailCopied" class="absolute bg-stone-800 bottom-8 -left-12 p-3 border-2 border-rose-500 font-medium hidden">¡Email copiado al portapapeles!</span>
+      </div>
       <a href="https://www.linkedin.com/in/esteban-2san/" target="_blank">LinkedIn</a>
       <a href="https://github.com/Ebanx3" target="_blank">GitHub</a>
     </footer>
     <script src="./js/getProjects.js" type="module"></script>
     <script src="./js/copyToClipboard.js" type="module"></script>
+    <script src="./js/checkServerStatus.js" type="module"></script>
+    <script src="./js/contactForm.js" type="module"></script>
   </body>
 </html>
