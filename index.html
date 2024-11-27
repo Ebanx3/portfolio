@@ -15,7 +15,7 @@
     <meta name="keywords" content="Portfolio, desarrollo web, web development, hmtl, css, javascript">
     <meta property="og:image" content="https://res.cloudinary.com/dupcvyc8l/image/upload/v1732675677/imagen_2024-11-26_234755081_bgkpo9.png">
   </head>
-  <body class="bg-stone-900 w-screen h-screen overflow-x-hidden p-2">
+  <body class="bg-stone-900 w-screen min-h-screen overflow-x-hidden p-2">
     <nav class="fixed top-0 w-full hidden sm:block">
       <ul
         class="flex justify-end text-stone-200 gap-6 py-2 font-medium max-w-[1024px] m-auto bg-stone-900 border-b-2 border-stone-600 px-2"
@@ -102,7 +102,8 @@
         <div id="projects-container" class="flex flex-col gap-8"></div>
         <div class="flex justify-center mt-4">
           <a
-            href="#"
+            href="./mas_proyectos.html"
+            target="_blank"
             class="bg-stone-800 text-stone-300 font-medium p-2 text-xs sm:text-sm inline-block hover:bg-stone-700"
             >Ver más proyectos</a
           >
@@ -272,15 +273,18 @@
       </section>
     </main>
 
-    <footer class="border-t-2 border-stone-600 flex justify-center text-stone-300 text-sm gap-6 py-4 max-w-[1024px] m-auto">
+    <footer class="border-t-2 border-stone-600 flex justify-center font-medium text-stone-300  text-sm gap-6 py-4 max-w-[1024px] m-auto ">
       <div class="relative">
-        <button id="emailText">Email</button>
+        <button id="emailText" class="hover:text-stone-50">Email</button>
         <span id="emailCopied" class="absolute bg-stone-800 bottom-8 -left-12 p-3 border-2 border-rose-500 font-medium hidden">¡Email copiado al portapapeles!</span>
       </div>
-      <a href="https://www.linkedin.com/in/esteban-2san/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Ebanx3" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/esteban-2san/" target="_blank" class="hover:text-stone-50">LinkedIn</a>
+      <a href="https://github.com/Ebanx3" target="_blank" class="hover:text-stone-50">GitHub</a>
     </footer>
     <script src="./js/getProjects.js" type="module"></script>
+    <script type="module">
+      window.getProjects();
+    </script>
     <script src="./js/copyToClipboard.js" type="module"></script>
     <script src="./js/checkServerStatus.js" type="module"></script>
     <script src="./js/contactForm.js" type="module"></script>

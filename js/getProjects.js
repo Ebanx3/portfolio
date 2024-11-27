@@ -6,43 +6,45 @@ const githubSVG = `<svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height=
 
 const linkSVG = `<svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>`
 
-//cuando hayan más de tres limitar a 3 con un for
-projects.forEach(project => {
-    const newProject = document.createElement("article");
-    const image = document.createElement("img");
-    const details = document.createElement("div");
-    const name = document.createElement("h3");
-    const description = document.createElement("p");
-    const buttonsContainer = document.createElement("div");
-    const deployButton = document.createElement("a");
-    const repositoryButton = document.createElement("a");
+const getProjects = (cant=3) =>{
+    for(let i = 0; i<cant && i<projects.length; i++){
+        const newProject = document.createElement("article");
+        const image = document.createElement("img");
+        const details = document.createElement("div");
+        const name = document.createElement("h3");
+        const description = document.createElement("p");
+        const buttonsContainer = document.createElement("div");
+        const deployButton = document.createElement("a");
+        const repositoryButton = document.createElement("a");
 
-    name.innerText = project.name;
-    description.innerText = project.description;
-    image.setAttribute("src",project.image);
+        name.innerText = projects[i].name;
+        description.innerText = projects[i].description;
+        image.setAttribute("src",projects[i].image);
 
-    deployButton.innerHTML = linkSVG + "Deploy";
-    deployButton.setAttribute("href", project.deploy);
-    deployButton.setAttribute("target","_blank");
+        deployButton.innerHTML = linkSVG + "Deploy";
+        deployButton.setAttribute("href", projects[i].deploy);
+        deployButton.setAttribute("target","_blank");
 
-    repositoryButton.innerHTML = githubSVG + "Repositorio";
-    repositoryButton.setAttribute("href",project.repository);
-    repositoryButton.setAttribute("target", "_blank");
+        repositoryButton.innerHTML = githubSVG + "Repositorio";
+        repositoryButton.setAttribute("href",projects[i].repository);
+        repositoryButton.setAttribute("target", "_blank");
 
-    newProject.classList.add("project");
-    
-    newProject.appendChild(image);
+        newProject.classList.add("project");
+        
+        newProject.appendChild(image);
 
-    details.appendChild(name);
-    details.appendChild(description);
+        details.appendChild(name);
+        details.appendChild(description);
 
-    if(project.deploy)
-    buttonsContainer.appendChild(deployButton);
-    buttonsContainer.appendChild(repositoryButton);
-    details.appendChild(buttonsContainer);
+        if(projects[i].deploy)
+        buttonsContainer.appendChild(deployButton);
+        buttonsContainer.appendChild(repositoryButton);
+        details.appendChild(buttonsContainer);
 
-    newProject.appendChild(details);
+        newProject.appendChild(details);
 
-    projectsContainer.appendChild(newProject);
-});
+        projectsContainer.appendChild(newProject);
+    }
+}
 
+window.getProjects = getProjects;
