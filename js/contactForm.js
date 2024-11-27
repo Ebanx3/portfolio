@@ -21,7 +21,7 @@ contactForm.addEventListener("submit", (event) => {
   loadingDiv.classList.remove("hidden");
   loadingDiv.classList.add("flex");
 
-  fetch(`${secrets.SERVER_ADDRESS}/redirectEmail`, {
+  fetch(`${SERVER_ADDRESS}/redirectEmail`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, message }),
