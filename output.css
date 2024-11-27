@@ -895,11 +895,6 @@ video {
   color: rgb(68 64 60 / var(--tw-text-opacity, 1));
 }
 
-.text-stone-800 {
-  --tw-text-opacity: 1;
-  color: rgb(41 37 36 / var(--tw-text-opacity, 1));
-}
-
 * {
   font-family: 'Roboto Mono', monospace;
 }
@@ -913,6 +908,7 @@ strong {
   border: 1px solid #292524;
   img{
     width: 33%;
+    aspect-ratio: 2;
     -o-object-fit: cover;
        object-fit: cover;
     padding: 8px;

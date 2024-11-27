@@ -16,6 +16,7 @@ strong {
     
     img{
         width: 33%;
+        aspect-ratio: 2;
         object-fit: cover;
         padding: 8px;
     }

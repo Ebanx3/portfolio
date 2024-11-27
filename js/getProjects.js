@@ -36,6 +36,7 @@ projects.forEach(project => {
     details.appendChild(name);
     details.appendChild(description);
 
+    if(project.deploy)
     buttonsContainer.appendChild(deployButton);
     buttonsContainer.appendChild(repositoryButton);
     details.appendChild(buttonsContainer);

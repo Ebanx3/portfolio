@@ -7,11 +7,10 @@
         "repository":"https://github.com/Ebanx3/organizer"
     },
     {
-        "name":"Organizador de enlaces, marcadores y notas",
-        "description":"Sitio web hecho con React, Vite y TypeScript, que permite organizar marcadores, enlaces y agregar notas.\nAdemás consume la api de OpenWeather para mostrar información del clima en la ciudad que elijas.",
-        "image":"./resources/organizador.png",
-        "deploy":"https://links-notes.netlify.app",
-        "repository":"https://github.com/Ebanx3/organizer"
+        "name":"email-myself (backend)",
+        "description":"Servidor backend desarrollado con Node.js, Express y Nodemailer.\nOfrece dos endpoints: /serverStatus, que devuelve el estado del servidor, y /redirectEmail, que recibe en el cuerpo de la solicitud los campos email y message, y los reenvía al correo electrónico asociado con el servidor.",
+        "image":"./resources/email-myself.png",
+        "repository":"https://github.com/Ebanx3/email-myself"
     }
     ,
     {
