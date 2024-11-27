@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # Asegúrate de que este token tenga permisos
+          token: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: Replace placeholder with server URL
         run: |
@@ -23,5 +23,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Utilizando el token correctamente
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
           publish_dir: ./
