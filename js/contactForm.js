@@ -21,7 +21,7 @@ contactForm.addEventListener("submit", (event) => {
   loadingDiv.classList.remove("hidden");
   loadingDiv.classList.add("flex");
 
-  fetch(`${window.serverUrl}/redirectEmail`, {
+  fetch(`https://todolist-bot-discord.onrender.com/redirectEmail`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, message }),
