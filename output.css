@@ -950,6 +950,19 @@ strong {
   }
 }
 
+::-webkit-scrollbar{
+  width: .8em;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #44403c;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #57534e;
+}
+
 @media (max-width: 624px){
   .project {
     flex-direction: column;
