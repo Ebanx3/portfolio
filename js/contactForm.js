@@ -28,6 +28,7 @@ contactForm.addEventListener("submit", (event) => {
   })
     .then((data) => data.json())
     .then((response) => {
+      console.log(response)
       loadingDiv.classList.add("hidden");
       loadingDiv.classList.remove("flex");
       showMessageSended(response.success);

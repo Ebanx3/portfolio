@@ -4,6 +4,7 @@ const serverOn = document.createElement("span");
 const serverOff = document.createElement("span");
 
 const sendButton = document.getElementById("sendButton");
+const spanVisits = document.getElementById("visits");
 
 const showServerOn = () => {
   serverOn.classList.add("text-emerald-400", "text-xs", "font-bold");
@@ -23,8 +24,10 @@ const showServerOff = () => {
 fetch(`https://todolist-bot-discord.onrender.com/serverStatus`)
   .then((data) => data.json())
   .then((response) => {
+    console.log(response)
     if (response.success) {
       showServerOn();
+      spanVisits.innerText = "Veces que visitaron este portfolio: " + response.visits;
     } else {
       showServerOff();
     }
