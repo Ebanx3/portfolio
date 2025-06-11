@@ -7,6 +7,15 @@ export const textColors = [
   "text-sky-400",
 ];
 
+export const borderColors = [
+  "border-rose-400",
+  "border-amber-400",
+  "border-cyan-400",
+  "border-emerald-400",
+  "border-indigo-400",
+  "border-sky-400",
+];
+
 export const hbgColors = [
   "hover:bg-rose-400",
   "hover:bg-amber-400",
@@ -44,4 +53,9 @@ document.querySelectorAll(".hoverbg-primary").forEach((element) => {
 document.querySelectorAll(".hovertext-secondary").forEach((element) => {
   element.classList.remove("hovertext-secondary");
   element.classList.add(hTextSecondary[index]);
+});
+
+document.querySelectorAll(".border-primary").forEach((element) => {
+  element.classList.remove("borderPrimary");
+  element.classList.add(borderColors[index]);
 });
