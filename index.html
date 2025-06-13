@@ -31,7 +31,7 @@
       <h1 class="text-xl sm:text-3xl text-stone-100 font-bold">
         Esteban dos Santos
       </h1>
-      <h2 class="text-l sm:text-2xl font-bold text-primary">
+      <h2 class="text-l sm:text-2xl font-bold text-rose-400">
         Desarrollador de Software
       </h2>
       <p class="text-sm sm:text-l text-stone-400 font-medium whitespace-pre-line p-2">
@@ -42,7 +42,7 @@
       <div class="flex gap-2 mt-4">
         <a
           href="https://www.linkedin.com/in/esteban-2san/"
-          class="text-primary flex gap-2 border-[1px] border-primary py-1 px-2 items-center text-sm hoverbg-primary hover:text-black font-bold"
+          class="text-rose-400 flex gap-2 border-[1px] border-rose-400 py-1 px-2 items-center text-sm hover:bg-rose-400 hover:text-black font-bold"
           target="_blank"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@
         >
         <a
           href="https://github.com/Ebanx3"
-          class="text-primary flex gap-2 border-[1px] border-primary py-1 px-2 items-center text-sm hoverbg-primary hover:text-black font-bold"
+          class="text-rose-400 flex gap-2 border-[1px] border-rose-400 py-1 px-2 items-center text-sm hover:bg-rose-400 hover:text-black font-bold"
           target="_blank"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@
             <a
               href="https://www.coursera.org/account/accomplishments/verify/EBVMLNE2YWPT?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
               target="_blank"
-              class="uppercase text-xs text-primary font-medium hovertext-secondary"
+              class="uppercase text-xs text-rose-400 font-medium hover:text-rose-200"
               >certificado</a
             >
             <span class="block ml-2 font-medium text-stone-300"
@@ -142,9 +142,9 @@
             <span class="text-xl font-bold">Desarrollo Web</span>
             <span class="text-stone-400 text-sm">2022</span>
             <a
-              href="https://www.coderhouse.com/ar/certificados/624bb2bf051e01001ac23348"
+              href="https://pub.coderhouse.com/legacy-certificates/624bb2bf051e01001ac23348?lang=es"
               target="_blank"
-              class="uppercase text-xs text-primary font-medium hovertext-secondary"
+              class="uppercase text-xs text-rose-400 font-medium hover:text-rose-200"
               >certificado</a
             >
             <span class="block ml-2 font-medium text-stone-300"
@@ -155,9 +155,9 @@
             <span class="text-xl font-bold">ReactJs</span>
             <span class="text-stone-400 text-sm">2022</span>
             <a
-              href="https://www.coderhouse.com/ar/certificados/633a1ce4dece68000e7190c2"
+              href="https://pub.coderhouse.com/legacy-certificates/633a1ce4dece68000e7190c2?lang=es"
               target="_blank"
-              class="uppercase text-xs text-primary font-medium hovertext-secondary"
+              class="uppercase text-xs text-rose-400 font-medium hover:text-rose-200"
               >certificado</a
             >
             <span class="block ml-2 font-medium text-stone-300"
@@ -168,9 +168,9 @@
             <span class="text-xl font-bold">Programación Backend</span>
             <span class="text-stone-400 text-sm">2022</span>
             <a
-              href="https://www.coderhouse.com/ar/certificados/632474a91a7013000e9f7b89"
+              href="https://pub.coderhouse.com/legacy-certificates/632474a91a7013000e9f7b89?lang=es"
               target="_blank"
-              class="uppercase text-xs text-primary font-medium hovertext-secondary"
+              class="uppercase text-xs text-rose-400 font-medium hover:text-rose-200"
               >certificado</a
             >
             <span class="block ml-2 font-medium text-stone-300"
@@ -258,7 +258,7 @@
             <textarea name="message" rows="6" class="bg-stone-800 resize-none focus:outline-none p-2 text-stone-100" placeholder="Hola Esteban! ..." required></textarea>
             <div class="flex justify-between items-center">
               <span class="text-stone-400 text-xs flex items-center gap-2" id="serverStatusSpan">Estado del servidor: </span>
-              <button id="sendButton" type="submit" class="text-primary flex gap-2 border-[1px] border-primary py-1 px-2 items-center text-sm hoverbg-primary hover:text-black font-bold">Enviar</button>
+              <button id="sendButton" type="submit" class="text-rose-400 flex gap-2 border-[1px] border-rose-400 py-1 px-2 items-center text-sm hover:bg-rose-400 hover:text-black font-bold cursor-pointer">Enviar</button>
             </div>
             <div id="loadingDiv" class="absolute bg-stone-800 h-full w-full top-0 left-0 justify-center items-center flex-col gap-6 hidden">
               <img src="./resources/loader.svg" alt="loader icon svg" class="h-48 ">
@@ -272,7 +272,7 @@
         </div>
       </section>
 
-      <span id="visits" class="m-auto text-primary text-xs"></span>
+      <span id="visits" class="m-auto text-rose-400 text-xs"></span>
     </main>
 
 
@@ -286,13 +286,12 @@
       <a href="https://github.com/Ebanx3" target="_blank" class="hover:text-stone-50">GitHub</a>
     </footer>
 
-   <script src="./js/pickPrimaryColor.js" type="module"></script>
+    <script src="./js/checkServerStatus.js" type="module"></script>
     <script src="./js/getProjects.js" type="module"></script>
     <script type="module">
       window.getProjects();
     </script>
     <script src="./js/copyToClipboard.js" type="module"></script>
-    <script src="./js/checkServerStatus.js" type="module"></script>
     <script src="./js/contactForm.js" type="module"></script>
   </body>
 </html>

@@ -18,9 +18,11 @@
     --color-sky-400: oklch(74.6% 0.16 232.661);
     --color-indigo-300: oklch(78.5% 0.115 274.713);
     --color-indigo-400: oklch(67.3% 0.182 276.935);
+    --color-rose-200: oklch(89.2% 0.058 10.001);
     --color-rose-300: oklch(81% 0.117 11.638);
     --color-rose-400: oklch(71.2% 0.194 13.428);
     --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-rose-600: oklch(58.6% 0.253 17.585);
     --color-stone-50: oklch(98.5% 0.001 106.423);
     --color-stone-100: oklch(97% 0.001 106.424);
     --color-stone-200: oklch(92.3% 0.003 48.717);
@@ -248,6 +250,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -272,8 +277,17 @@
   .flex-grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .resize-none {
     resize: none;
@@ -347,26 +361,14 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
-  .border-amber-400 {
-    border-color: var(--color-amber-400);
-  }
-  .border-cyan-400 {
-    border-color: var(--color-cyan-400);
-  }
-  .border-emerald-400 {
-    border-color: var(--color-emerald-400);
-  }
-  .border-indigo-400 {
-    border-color: var(--color-indigo-400);
-  }
   .border-rose-400 {
     border-color: var(--color-rose-400);
   }
   .border-rose-500 {
     border-color: var(--color-rose-500);
   }
-  .border-sky-400 {
-    border-color: var(--color-sky-400);
+  .border-rose-600 {
+    border-color: var(--color-rose-600);
   }
   .border-stone-600 {
     border-color: var(--color-stone-600);
@@ -452,26 +454,14 @@
   .whitespace-pre-line {
     white-space: pre-line;
   }
-  .text-amber-400 {
-    color: var(--color-amber-400);
-  }
-  .text-cyan-400 {
-    color: var(--color-cyan-400);
-  }
   .text-emerald-400 {
     color: var(--color-emerald-400);
-  }
-  .text-indigo-400 {
-    color: var(--color-indigo-400);
   }
   .text-red-400 {
     color: var(--color-red-400);
   }
   .text-rose-400 {
     color: var(--color-rose-400);
-  }
-  .text-sky-400 {
-    color: var(--color-sky-400);
   }
   .text-stone-100 {
     color: var(--color-stone-100);
@@ -491,31 +481,17 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .hover\:bg-amber-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-amber-400);
-      }
-    }
+  .underline {
+    text-decoration-line: underline;
   }
-  .hover\:bg-cyan-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-cyan-400);
-      }
-    }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
-  .hover\:bg-emerald-400 {
+  .hover\:bg-rose-300 {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-emerald-400);
-      }
-    }
-  }
-  .hover\:bg-indigo-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-indigo-400);
+        background-color: var(--color-rose-300);
       }
     }
   }
@@ -526,13 +502,6 @@
       }
     }
   }
-  .hover\:bg-sky-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-sky-400);
-      }
-    }
-  }
   .hover\:bg-stone-700 {
     &:hover {
       @media (hover: hover) {
@@ -540,10 +509,10 @@
       }
     }
   }
-  .hover\:text-amber-300 {
+  .hover\:bg-stone-900 {
     &:hover {
       @media (hover: hover) {
-        color: var(--color-amber-300);
+        background-color: var(--color-stone-900);
       }
     }
   }
@@ -554,38 +523,10 @@
       }
     }
   }
-  .hover\:text-cyan-300 {
+  .hover\:text-rose-200 {
     &:hover {
       @media (hover: hover) {
-        color: var(--color-cyan-300);
-      }
-    }
-  }
-  .hover\:text-emerald-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-emerald-300);
-      }
-    }
-  }
-  .hover\:text-indigo-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-indigo-300);
-      }
-    }
-  }
-  .hover\:text-rose-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-rose-300);
-      }
-    }
-  }
-  .hover\:text-sky-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-sky-300);
+        color: var(--color-rose-200);
       }
     }
   }
@@ -764,6 +705,11 @@ strong {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -775,6 +721,7 @@ strong {
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }

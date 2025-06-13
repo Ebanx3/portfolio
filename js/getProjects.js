@@ -1,5 +1,4 @@
 import projects from "./projects.json" with {type :"json"};
-import {index, hbgColors, textColors} from "./pickPrimaryColor.js"
 
 const projectsContainer = document.getElementById("projects-container");
 
@@ -25,12 +24,12 @@ const getProjects = (cant=3) =>{
         deployButton.innerHTML = linkSVG + "Deploy";
         deployButton.setAttribute("href", projects[i].deploy);
         deployButton.setAttribute("target","_blank");
-        deployButton.classList.add(textColors[index], hbgColors[index], "border")
+        deployButton.classList.add("text-rose-400","border","border-rose-400","hover:bg-rose-400","hover:text-black")
 
         repositoryButton.innerHTML = githubSVG + "Repositorio";
         repositoryButton.setAttribute("href",projects[i].repository);
         repositoryButton.setAttribute("target", "_blank");
-        repositoryButton.classList.add(textColors[index], hbgColors[index], "border")
+        repositoryButton.classList.add("text-rose-400","border","border-rose-400","hover:bg-rose-400","hover:text-black")
 
         newProject.classList.add("project");
         

@@ -12,6 +12,11 @@ const showMessageSended = (wasSended) => {
     : "Hubo un error al intentar enviar tu mensaje.\nPor favor, inténtalo de nuevo en unos minutos";
 };
 
+const htmlToSend = (email, message) => {
+  return `<h2>Recibiste un mensaje en tu portfolio de parte de <strong>${email}</strong></h2>
+  <p style="white-space: pre-line;">${message}</p>`;
+};
+
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -21,10 +26,11 @@ contactForm.addEventListener("submit", (event) => {
   loadingDiv.classList.remove("hidden");
   loadingDiv.classList.add("flex");
 
-  fetch(`https://todolist-bot-discord.onrender.com/redirectEmail`, {
+  // fetch(`https://todolist-bot-discord.onrender.com/redirectEmail`, {
+  fetch(`http://localhost:8080/redirectEmail`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, message }),
+    body: JSON.stringify({ from: 'Portfolio', subject:"Nuevo mensaje recibido en el portfolio", html: htmlToSend(email,message) }),
   })
     .then((data) => data.json())
     .then((response) => {
