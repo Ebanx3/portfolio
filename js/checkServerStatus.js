@@ -21,8 +21,7 @@ const showServerOff = () => {
   sendButton.classList.add("text-stone-700" , "border-stone-700" , 'hover:bg-stone-900');
 };
 
-// fetch(`https://todolist-bot-discord.onrender.com/serverStatus`)
-fetch(`http://localhost:8080/serverStatus`)
+fetch(`https://todolist-bot-discord.onrender.com/serverStatus`)
   .then((data) => data.json())
   .then((response) => {
     console.log(response)
