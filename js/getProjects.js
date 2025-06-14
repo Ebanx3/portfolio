@@ -20,6 +20,8 @@ const getProjects = (cant=3) =>{
         name.innerText = projects[i].name;
         description.innerText = projects[i].description;
         image.setAttribute("src",projects[i].image);
+        image.classList.add("cursor-pointer","hover:outline-2", 'outline-stone-700');
+        image.addEventListener("click", ()=> showImage(projects[i].image))
 
         deployButton.innerHTML = linkSVG + "Deploy";
         deployButton.setAttribute("href", projects[i].deploy);
@@ -47,6 +49,26 @@ const getProjects = (cant=3) =>{
 
         projectsContainer.appendChild(newProject);
     }
+}
+
+const showImage = (image) => {
+    document.startViewTransition();
+    const imageContainer = document.createElement('div');
+    const img = document.createElement('img');
+    const closeButton = document.createElement('button');
+
+    img.setAttribute('src', image);
+    img.classList.add('w-[80%]', 'border-2','border-stone-500');
+    imageContainer.classList.add('fixed', 'top-0', 'left-0' ,'w-screen','h-screen' , 'flex','justify-center','items-center', 'backdrop-blur-md');
+
+    closeButton.innerHTML='<img src="./resources/x.svg" alt="close button" class="size-16 filter invert"/>';
+    closeButton.classList.add('absolute', 'right-[11%]','top-14','size-20', 'text-white', 'cursor-pointer', 'hover:opacity-50');
+    closeButton.addEventListener('click',()=>imageContainer.remove());
+
+    imageContainer.appendChild(img)
+    imageContainer.appendChild(closeButton)
+    
+    document.querySelector('body').append(imageContainer);
 }
 
 window.getProjects = getProjects;

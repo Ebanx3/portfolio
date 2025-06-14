@@ -69,6 +69,10 @@ strong {
     background: #57534e;
 }
 
+@view-transition{
+    navigation:auto;
+}
+
 @media (max-width: 624px){
 
     .project {

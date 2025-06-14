@@ -7,9 +7,10 @@
         "repository":"https://github.com/Ebanx3/organizer"
     },
     {
-        "name":"email-myself (backend)",
-        "description":"Servidor backend desarrollado con Node.js, Express y Nodemailer.\nOfrece dos endpoints: /serverStatus, que devuelve el estado del servidor, y /redirectEmail, que recibe en el cuerpo de la solicitud los campos email y message, y los reenvía al correo electrónico asociado con el servidor.",
-        "image":"./resources/email-myself.png",
+        "name":"email-redirect (backend)",
+        "description":"Servidor backend desarrollado con Node.js, Express , Redis y Resend.\nFuncionalidad: Redirige mensajes desde un sitio web a un email registrado previamente.",
+        "image":"./resources/emailredirect.png",
+        "deploy":"https://todolist-bot-discord.onrender.com/",
         "repository":"https://github.com/Ebanx3/email-myself"
     }
     ,
